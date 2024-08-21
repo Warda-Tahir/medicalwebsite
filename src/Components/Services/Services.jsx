@@ -3,7 +3,9 @@ import './Services.css';
 import ultrasoundImage from '../../assets/slider1.jpg'; 
 import ctScanImage from '../../assets/slider2.jpg'; 
 import xrayImage from '../../assets/slider3.jpg'; 
-import sparePartsImage from '../../assets/slider2.jpg';
+import sparePartsImage1 from '../../assets/Transducer.jpg'; 
+import sparePartsImage2 from '../../assets/xray-tube.jpg'; 
+import sparePartsImage3 from '../../assets/endocavity.jpg';
 
 const servicesData = [
     {
@@ -23,8 +25,24 @@ const servicesData = [
     },
     {
         title: 'Spare Parts',
-        image: sparePartsImage,
-        description: 'High-quality spare parts are vital for the maintenance and longevity of medical equipment. Our range of spare parts ensures that your machines continue to function efficiently, minimizing downtime and ensuring that patient care is not compromised. From small components to larger assemblies, we provide everything you need to keep your equipment in top condition.',
+        images: [
+            { 
+                src: sparePartsImage1, 
+                heading: 'Ultrasound Transducer', 
+                subheading: 'High-frequency transducer for detailed imaging in obstetrics and cardiology.' 
+            },
+            { 
+                src: sparePartsImage2, 
+                heading: 'X-Ray Tube', 
+                subheading: 'Durable tube for consistent and clear radiographic images.' 
+            },
+            { 
+                src: sparePartsImage3, 
+                heading: 'Endocavity Probe', 
+                subheading: 'Specialized probe for high-resolution endocavity scanning.' 
+            },
+        ],
+        
     },
 ];
 
@@ -39,17 +57,40 @@ const Services = () => {
                         key={index} 
                         className={`service-tab ${activeService.title === service.title ? 'active' : ''}`}
                         onClick={() => setActiveService(service)}
+                        aria-selected={activeService.title === service.title}
                     >
                         {service.title}
                     </button>
                 ))}
             </div>
             <div className="services-content">
-                <img src={activeService.image} alt={activeService.title} className="service-image" />
-                <div className="services-text">
-                    <h2>{activeService.title}</h2>
-                    <p>{activeService.description}</p>
-                </div>
+                {activeService.images ? (
+                    <div className="spare-parts-content">
+                        <div className="spare-parts-images">
+                            {activeService.images.map((item, index) => (
+                                <div key={index} className="spare-part-item">
+                                    <img src={item.src} alt={`Spare part ${index + 1}`} className="spare-part-image" />
+                                    <div className="spare-part-info">
+                                        <h3 className="spare-part-heading">{item.heading}</h3>
+                                        <p className="spare-part-subheading">{item.subheading}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                ) : (
+                    <>
+                        <img 
+                            src={activeService.image} 
+                            alt={`Image of ${activeService.title}`} 
+                            className="service-image" 
+                        />
+                        <div className="services-text">
+                            <h2>{activeService.title}</h2>
+                            <p>{activeService.description}</p>
+                        </div>
+                    </>
+                )}
             </div>
         </div>
     );

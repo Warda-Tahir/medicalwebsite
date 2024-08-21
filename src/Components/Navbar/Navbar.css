@@ -282,4 +282,20 @@
     }
 }
 
+/* Responsive styles */
+@media (max-width: 768px) {
+    .contact-button {
+        font-size: 14px; /* Smaller font size on tablets */
+        padding: 8px 16px; /* Reduced padding for smaller screens */
+        margin: 10px 5px; /* Adjust margin to fit on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-button {
+        font-size: 12px; /* Smaller font size on mobile */
+        padding: 6px 12px; /* Further reduced padding for very small screens */
+        margin: 8px 0; /* Adjust margin to fit better on very small screens */
+    }
+}
 
