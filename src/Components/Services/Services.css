@@ -1,0 +1,80 @@
+.services-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.services-sidebar {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+}
+
+.service-tab {
+    padding: 15px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.service-tab:hover, .service-tab.active {
+    background-color: #40A2E3;
+    color: white;
+}
+
+.services-content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+.services-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    padding: 0 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column;
+        height: auto; /* Adjust height for smaller screens */
+    }
+
+    .services-sidebar {
+        width: 100%;
+        padding-right: 0; /* Remove right padding */
+        margin-bottom: 20px; /* Add margin to separate from content */
+    }
+
+    .services-content {
+        width: 100%;
+    }
+
+    .service-tab {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .services-content p {
+        font-size: 16px; /* Adjust font size for smaller screens */
+        padding: 0 10px; /* Adjust padding for smaller screens */
+    }
+}
