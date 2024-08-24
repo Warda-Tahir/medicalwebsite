@@ -1,13 +1,15 @@
 import React from 'react';
 import './Footer.css';
 
+import footer from '../../assets/footer.jpg'; 
+
 const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-content">
                 <div className="footer-column">
                     <div className="footer-logo">
-                        <img src="src\assets\logo.png" alt="Logo" className="logo-image" />
+                        <img src={footer} alt="Logo" className="logo-image" />
                     </div>
                     <div className="footer-social">
                         <a href="https://www.facebook.com/profile.php?id=100008738828874" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>

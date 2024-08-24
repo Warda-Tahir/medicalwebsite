@@ -2,16 +2,19 @@
 import React from 'react';
 import './header.css';
 
+import logo from '../../assets/1.jpg'; 
+import tagline from '../../assets/2.jpg'; 
+
 const Header = () => {
     return (
         <header className="header">
             <div className="container">
                 <div className="logo">
-                <img src="src/assets/logo.png" alt="Logo" />
+                    <img src={logo} alt="Logo" />
                     <div className="logo-text">
                     </div>
                 </div>
-                <img src="src/assets/tagline.png" alt="Tagline" className="tagline-img"/>
+                <img src={tagline} alt="Tagline" className="tagline-img"/>
                 <div className="contact-info">
                     <div className="phone">
                         <div className="phone-icon">
