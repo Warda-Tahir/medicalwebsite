@@ -1,0 +1,129 @@
+.projects-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 40px;
+    box-sizing: border-box;
+    gap: 20px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+}
+
+.projects-sidebar {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    border-right: 2px solid #e0e0e0;
+}
+
+.projects-heading {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.projects-icon {
+    font-size: 28px;
+    margin-right: 10px;
+    color: green; /* Change color as needed */
+}
+
+.projects-tab {
+    padding: 15px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.projects-tab:hover, .projects-tab.active {
+    background-color: #40A2E3;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.projects-content {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    transition: opacity 0.5s ease;
+}
+
+.projects-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.projects-image {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.projects-text {
+    text-align: left;
+    padding-left: 20px; /* Adjust padding for better alignment */
+}
+
+.projects-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+.projects-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .projects-sidebar {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 20px;
+        border-right: none;
+    }
+
+    .projects-content {
+        width: 100%;
+    }
+
+    .projects-tab {
+        font-size: 14px;
+    }
+
+    .projects-text h2 {
+        font-size: 20px;
+    }
+
+    .projects-description {
+        font-size: 14px;
+        padding-left: 15px;
+    }
+}

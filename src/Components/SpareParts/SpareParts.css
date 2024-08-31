@@ -1,0 +1,74 @@
+.spare-parts-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 45px;
+    gap: 20px;
+    background-color: #f8f9fa; /* Light grey background for contrast */
+}
+
+.spare-part-card {
+    width: calc(33.333% - 20px); /* Responsive width for three cards per row */
+    max-width: 300px; /* Maximum width to maintain consistency */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spare-part-card:hover {
+    transform: translateY(-10px); /* Lifts the card slightly on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.spare-part-image {
+    width: 100%;
+    height: 100%; /* Adjusted height for proper sizing */
+    object-fit: cover;
+}
+
+.spare-part-info {
+    padding: 15px 10px; /* Adjusted padding for better spacing */
+}
+
+.spare-part-heading {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.spare-part-subheading {
+    font-size: 14px;
+    color: #666; /* Lighter text color for subheadings */
+    line-height: 1.5;
+    margin-bottom: 10px; /* Adds space below the subheading for better separation */
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .spare-part-card {
+        width: calc(50% - 20px); /* Two cards per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .spare-part-card {
+        width: calc(100% - 20px); /* Single column layout for smaller screens */
+    }
+
+    .spare-part-info {
+        padding: 10px; /* Reduced padding for smaller screens */
+    }
+
+    .spare-part-heading {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .spare-part-subheading {
+        font-size: 13px; /* Adjust font size for smaller screens */
+    }
+}

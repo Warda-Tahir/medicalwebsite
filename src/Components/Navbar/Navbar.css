@@ -1,4 +1,4 @@
-/* NavBar.css */
+/* General styles for the navbar */
 .navbar {
     background-color: #40A2E3;
     border-radius: 8px;
@@ -15,12 +15,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative; /* Ensure that child elements are positioned relative to this container */
 }
 
+/* Styling for the nav menu */
 .nav-menu {
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 18px;
     margin: 0;
     padding: 0;
 }
@@ -37,65 +39,29 @@
     display: block;
     padding: 10px 15px;
     border-radius: 5px;
-    position: relative; /* Position relative to place the underline correctly */
+    position: relative;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .nav-item a.active {
-    color: #FFD700; /* Highlight color for the active menu item */
+    color: green;
+    background-color: white;
+    transform: scale(1.05);
 }
 
 .nav-item a.active::after {
     content: '';
     display: block;
     width: 100%;
-    height: 2px; /* Thickness of the underline */
-    background-color: #FFD700; /* Color of the underline */
+    height: 2px;
     position: absolute;
-    bottom: 0; /* Position at the bottom of the link */
+    bottom: 0;
     left: 0;
-    transition: width 0.3s ease; /* Smooth transition effect */
+    transition: width 0.3s ease;
 }
 
 .nav-item a:hover {
-    text-decoration: none;
-}
-
-
-
-.search-container {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.search-bar-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 300px;
-}
-
-.search-bar {
-    width: 100%;
-    padding: 8px 40px 8px 12px;
-    border-radius: 40px;
-    border: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 16px;
-    outline: none;
-}
-
-.search-bar:focus {
-    border: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.search-icon {
-    position: absolute;
-    top: 50%;
-    right: 12px;
-    transform: translateY(-50%);
-    color: #aaa;
-    cursor: pointer;
+    color: green;
 }
 
 .contact-button {
@@ -111,28 +77,42 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.contact-button.active {
-    background-color: #218838; /* Darker green when active */
+    margin-right: 15px; /* Add margin to create space between the button and search icon */
 }
 
 .contact-button:hover {
     background-color: #218838;
 }
 
-/* Add to NavBar.css */
-.search-container {
-    flex-grow: 1;
+/* Search icon styles */
+.search-icon-wrapper {
+    position: relative;
     display: flex;
-    justify-content: center;
-    position: relative; /* To position search results correctly */
+    align-items: center;
+    cursor: pointer;
+}
+
+.search-icon {
+    color: white;
+    font-size: 20px;
+}
+
+.search-container {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 11;
+    width: 200px; /* Adjust width as needed */
 }
 
 .search-bar-wrapper {
     position: relative;
     width: 100%;
-    max-width: 300px;
 }
 
 .search-bar {
@@ -150,52 +130,9 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.search-icon {
-    position: absolute;
-    top: 50%;
-    right: 12px;
-    transform: translateY(-50%);
-    color: #aaa;
-    cursor: pointer;
-}
-
-.search-results {
-    position: absolute;
-    top: 100%; /* Align below the search bar */
-    left: 0;
-    width: 100%;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-    max-height: 300px; /* Adjust as needed */
-    overflow-y: auto;
-}
-
-.search-results ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.search-results li {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-.search-results li:last-child {
-    border-bottom: none;
-}
-
-.search-results a {
-    text-decoration: none;
-    color: #333;
+/* Show search container when active */
+.search-container.active {
     display: block;
-}
-
-.search-results a:hover {
-    background-color: #f0f0f0;
 }
 
 /* Navigation toggler styling */
@@ -205,31 +142,32 @@
 }
 
 .nav-toggler div {
-    width: 1.8rem;
-    height: 0.2rem;
-    margin: 0.4rem;
+    width: 1.5rem; /* Adjusted width */
+    height: 0.15rem; /* Adjusted height */
+    margin: 0.3rem; /* Adjusted margin */
     background: white;
     transition: background 0.3s ease;
 }
 
 /* Close icon styling */
 .close-icon {
-    display: none; /* Hidden by default */
+    display: none;
     position: absolute;
-    top: 10px; /* Adjust as needed */
-    right: 10px; /* Adjust as needed */
+    top: 20px; /* Space from top */
+    right: 10px;
     cursor: pointer;
-    padding: 20px; /* Padding around the icon */
-    background: rgba(0, 0, 0, 0.5); /* Optional: background to make the icon more visible */
-    border-radius: 50%; /* Optional: make the background circular */
+    padding: 10px; /* Reduced padding for smaller size */
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    z-index: 12; /* Ensures it stays on top */
 }
 
 .close-icon::before,
 .close-icon::after {
     content: '';
     display: block;
-    width: 1.8rem; /* Adjust width to fit within padding */
-    height: 0.2rem;
+    width: 14px; /* Adjusted width */
+    height: 2px; /* Adjusted height */
     background: white;
     position: absolute;
     top: 50%;
@@ -245,11 +183,14 @@
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-
 /* Responsive styles */
 @media (max-width: 768px) {
     .nav-toggler {
-        display: block; /* Show the toggler on mobile */
+        display: block;
+    }
+    .navbar{
+        height: 40px;
+        padding: 0 20px;
     }
 
     .nav-menu {
@@ -257,14 +198,15 @@
         top: 0;
         left: 0;
         width: 50%;
-        height: 100vh; /* Ensure it covers the full height */
+        height: 100vh;
         background: #40A2E3;
         flex-direction: column;
         transform: translateX(-100%);
         transition: transform 0.5s ease-in;
-        z-index: 10; /* Ensure menu is above the content */
-        padding: 20px; /* Add padding for the close icon */
+        z-index: 10;
+        padding: 60px 20px 20px; /* Add top padding for close icon */
         box-sizing: border-box;
+        overflow-y: auto; /* Enable vertical scrolling */
     }
 
     .nav-menu.nav-active {
@@ -278,24 +220,20 @@
     }
 
     .nav-menu .close-icon {
-        display: block; /* Show the close icon in the menu */
+        display: block;
     }
-}
 
-/* Responsive styles */
-@media (max-width: 768px) {
     .contact-button {
-        font-size: 14px; /* Smaller font size on tablets */
-        padding: 8px 16px; /* Reduced padding for smaller screens */
-        margin: 10px 5px; /* Adjust margin to fit on smaller screens */
+        font-size: 14px;
+        padding: 8px 16px;
+        margin: 10px 5px;
     }
 }
 
 @media (max-width: 480px) {
     .contact-button {
-        font-size: 12px; /* Smaller font size on mobile */
-        padding: 6px 12px; /* Further reduced padding for very small screens */
-        margin: 8px 0; /* Adjust margin to fit better on very small screens */
+        font-size: 12px;
+        padding: 6px 12px;
+        margin: 8px 0;
     }
 }
-
