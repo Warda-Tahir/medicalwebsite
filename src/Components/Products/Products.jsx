@@ -2,7 +2,9 @@ import React from 'react';
 import './Products.css';
 import ultrasoundImage from '../../assets/ultrasound.jpg'; 
 import ctScanImage from '../../assets/ctscan.jpg'; 
-import xrayImage from '../../assets/x-ray.jpg'; 
+import xrayImage from '../../assets/x-ray.jpg';
+import Nuclearmedicine from '../../assets/Nuclearmedicine.jpg'; 
+
 
 const productsData = [
     {
@@ -33,6 +35,16 @@ const productsData = [
             'High-quality images for precise diagnosis',
             'Various imaging modes for different needs',
             'Commonly used for routine exams and emergency situations'
+        ],
+    },
+    {
+        title: 'Nuclear Medicine',
+        image: Nuclearmedicine,
+        description: [
+            'Radiotracers for detailed imaging.',
+            'PET and SPECT for various diagnostics.',
+            'Provides functional and molecular data.',
+            'Useful for routine and emergency exams.'
         ],
     },
 ];

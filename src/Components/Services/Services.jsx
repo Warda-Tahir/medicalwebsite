@@ -6,33 +6,32 @@ Al Rafay Traders is committed to providing quality after-sales service, as we be
 
 ### Our Locations
 Al Rafay Traders’ head office is located in Lahore, with additional offices in:
-- Islamabad
-- Karachi
-- Peshawar
-- Quetta
-- Multan
-- Bahawalpur
-- Hyderabad
-- Abbotabad
+- Lahore
 
 This extensive network ensures prompt responses and effective after-sales servicing.
 
 ### Quality Service
-Al Rafay Traders is renowned countrywide for the quality of its after-sales service. Our service department adheres to ISO-9001: 2008 standards. Our engineers are our greatest assets, receiving rigorous training globally. As of December 2018, 85 out of 200 engineers received foreign training for equipment, including:
+Al Rafay Traders is renowned countrywide for the 
+quality of its after-sales service.  Our engineers are our greatest assets, 
+receiving rigorous training globally. including:
 - CT-scanners
-- MRI machines
 - Ultrasounds
 - Color Dopplers
+- X-Ray 
+- Floroscopy 
+- DR System / CR Systems
+- Memography
+- Mobile X-Ray
+- C-Arms
+
 
 ### Repair Services
 We offer repair services for a range of equipment, including:
-- MRI, CT-Scanners, and Angiography equipment
+- CT-Scanners equipment
 - All types of X-ray equipment
 - All types of ultrasound equipment, Color Dopplers, and Echocardiography machines
-- ICU/CCU Telemetry and Hardware units, Cardiac monitors, Defibrillators, and Resuscitators
+- Cardiac monitors, Defibrillators, and Resuscitators
 - Infusion Pumps, Infant Incubators, and other Neonatal equipment
-- Radiotherapy equipment such as Cobalt 60
-- Cyberknife robotic radiosurgery
 
 ### Installation and Training
 Our highly trained engineers install machines efficiently, adhering to international quality standards. We offer turnkey installations including:

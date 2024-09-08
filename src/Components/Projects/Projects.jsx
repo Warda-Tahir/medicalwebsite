@@ -1,46 +1,43 @@
 import React, { useState, useEffect } from 'react';
 import './Projects.css';
-import projectImage1 from '../../assets/project4.jpg'; 
-import projectImage2 from '../../assets/project1.jpg'; 
-import projectImage3 from '../../assets/project2.jpg'; 
-import projectImage4 from '../../assets/project3.jpg'; 
+import projectImage1 from '../../assets/project1.jpg'; 
+import projectImage2 from '../../assets/project2.jpg'; 
+import projectImage3 from '../../assets/project3.jpg'; 
+import projectImage4 from '../../assets/project4.jpg'; 
 
 const projectsData = [
     {
-        title: 'Shaukat Khanum Memorial Cancer Hospital',
+        title: 'Doctor Hospital, Lahore',
         image: projectImage1,
         description: [
-            'Serviced X-Ray Tubes',
-            'Recalibrated Cobalt Therapy Equipment',
-            'Updated Simulators',
-            'Serviced Color Dopplers'
-        ],
+            'Serviced SPECT System',
+            'Installed Fluoroscopy/DR System',
+            'Installed X-Ray Machine'
+        ]
     },
     {
-        title: 'Lahore General Hospital - MRI Machine',
+        title: 'Quaid-e-Azam Internatipnal Hospital, Islamabad',
         image: projectImage2,
         description: [
-            'Serviced MRI machine',
-            'Enhanced imaging accuracy',
+            'Serviced SPECT System',
+            'Installed Fluoroscopy/DR System',
             'Calibration for optimal performance'
         ],
     },
     {
-        title: 'Mayo Hospital - X-Ray Equipment',
+        title: 'Multan MRI Dignostic, Multan',
         image: projectImage3,
         description: [
-            'Serviced X-Ray equipment',
-            'Improved image quality',
+            'Serviced SPECT System',
             'Extensive repairs and maintenance'
         ],
     },
     {
-        title: 'Punjab Institute of Cardiology - Ultrasound System',
+        title: 'Shifa International Hospital, Islamabad',
         image: projectImage4,
         description: [
-            'Serviced Ultrasound system',
-            'Upgraded software and hardware check',
-            'Optimized image resolution'
+            'Installed Fluoroscopy/DR System',
+            'Upgraded software and hardware check'
         ],
     },
 ];
